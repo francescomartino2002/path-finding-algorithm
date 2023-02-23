@@ -1,7 +1,6 @@
 import time
 import os
 
-start_time = time.time()
 DIM = 20
 D = 10 #lenght of a cell 
 D2 = 14 # diagonal length of a cell (sqrt(2))
@@ -54,8 +53,7 @@ class Cell:
                 else: continue
                 if new_node in open:
                     continue
-                if new_node in close:
-                    #print('node already in closed')
+                if new_node in close
                     continue
                 for z in open.copy():
                     if z.position == new_node.position:
@@ -129,7 +127,6 @@ def main(matrix):
         #time.sleep(0.1)
     #print_matrix(matrix)
 
-#for running indipendently we need two readjust matrix parameters
 
 if __name__ == '__main__':
     matrix = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -154,6 +151,5 @@ if __name__ == '__main__':
               [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],]
 
     main(matrix)
-    print(len(open),len(close))
-    print("--- %s seconds ---" % (time.time() - start_time))
+
    
